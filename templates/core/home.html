@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio | Sistema Leónor{% endblock %}
+
+{% block content %}
+
+<h1 class="mb-4">Sistema de créditos Leónor</h1>
+
+<button
+    class="btn btn-primary"
+    hx-get="{% url 'htmx_test' %}"
+    hx-target="#resultado"
+    hx-swap="innerHTML"
+>
+    Probar HTMX
+</button>
+
+<div id="resultado" class="mt-4"></div>
+
+{% endblock %}
