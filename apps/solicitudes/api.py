@@ -12,6 +12,7 @@ router = Router(tags=["Solicitudes"])
 class SolicitudCreditoOut(Schema):
     id: int
     cliente_id: int
+    tipo_credito: str
     monto_solicitado: Decimal
     plazo_meses: int
     fecha_solicitud: date

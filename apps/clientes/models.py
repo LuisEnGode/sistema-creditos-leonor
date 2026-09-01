@@ -33,6 +33,11 @@ class Cliente(models.Model):
 
     activo = models.BooleanField(default=True)
 
+    es_socio = models.BooleanField(
+        default=False,
+        verbose_name="es socio",
+    )
+
     creado_en = models.DateTimeField(auto_now_add=True)
     actualizado_en = models.DateTimeField(auto_now=True)
 

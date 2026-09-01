@@ -8,6 +8,7 @@ class SolicitudCreditoAdmin(admin.ModelAdmin):
     list_display = (
         "id",
         "cliente",
+        "tipo_credito",
         "monto_solicitado",
         "plazo_meses",
         "fecha_solicitud",
@@ -19,6 +20,7 @@ class SolicitudCreditoAdmin(admin.ModelAdmin):
         "cliente__apellidos",
     )
     list_filter = (
+        "tipo_credito",
         "estado",
         "fecha_solicitud",
     )

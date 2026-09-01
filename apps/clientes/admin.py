@@ -10,6 +10,7 @@ class ClienteAdmin(admin.ModelAdmin):
         "apellidos",
         "nombres",
         "telefono",
+        "es_socio",
         "activo",
     )
     search_fields = (
@@ -19,4 +20,4 @@ class ClienteAdmin(admin.ModelAdmin):
         "telefono",
         "correo",
     )
-    list_filter = ("activo", "tipo_identificacion")
+    list_filter = ("es_socio", "activo", "tipo_identificacion")
