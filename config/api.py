@@ -1,6 +1,7 @@
 from ninja import NinjaAPI
 
 from apps.clientes.api import router as clientes_router
+from apps.solicitudes.api import router as solicitudes_router
 
 api = NinjaAPI(
     title="Sistema Créditos Leónor API",
@@ -8,6 +9,7 @@ api = NinjaAPI(
 )
 
 api.add_router("/clientes/", clientes_router)
+api.add_router("/solicitudes/", solicitudes_router)
 
 
 @api.get("/health", tags=["Sistema"])
