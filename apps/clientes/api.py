@@ -13,6 +13,7 @@ class ClienteOut(Schema):
     apellidos: str
     telefono: str
     correo: str
+    es_socio: bool
     activo: bool
 
 

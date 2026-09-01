@@ -21,6 +21,7 @@ class ClienteModelTests(TestCase):
         self.assertEqual(cliente.nombres, "Jonathan")
         self.assertEqual(cliente.apellidos, "Loja")
         self.assertTrue(cliente.activo)
+        self.assertFalse(cliente.es_socio)
 
     def test_identificacion_debe_ser_unica(self):
         Cliente.objects.create(
@@ -72,6 +73,7 @@ class ClienteApiTests(TestCase):
             data[0]["identificacion"],
             "0102030405",
         )
+        self.assertFalse(data[0]["es_socio"])
 
     def test_obtener_cliente(self):
         response = self.client.get(
