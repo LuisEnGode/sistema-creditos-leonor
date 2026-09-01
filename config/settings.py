@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # APLICACIONES PROPIAS
     "apps.core",
     "apps.clientes",
+    "apps.solicitudes",
     "apps.creditos",
     "apps.pagos",
     "apps.configuracion",
